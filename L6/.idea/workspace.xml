@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b2369f8d-3ed8-48cc-8c0c-c9acee52d054" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../A1/src/EmptyPList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1/src/EmptyPList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1/src/NEmptyPList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1/src/NEmptyPList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1/src/PList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1/src/PList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1/test/PListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1/test/PListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A2/src/Dequeue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A2/src/Dequeue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A2/src/FastQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A2/src/FastQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A2/src/SlowQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A2/src/SlowQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A2/src/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A2/src/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A2/test/SpeedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A2/test/SpeedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A2/test/StackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A2/test/StackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/template-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/A3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/Dequeue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/EmptyPList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/FastDequeue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/FastQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/NEmptyPList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/PList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/SlowQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/Stack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/exceptions/EmptyPCollectionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/exceptions/IndexOutOfBoundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/exceptions/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/interfaces/DequeueI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/interfaces/PCollectionI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/interfaces/QueueI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/src/interfaces/StackI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/test/DequeueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/test/PListTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/test/QueueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/test/SpeedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A3/test/StackTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A4/src/HM.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A4/src/HM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A4/test/HMTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A4/test/HMTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/L4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/src/DynamicArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L4/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L5/src/CustomHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/../L5/src/CustomHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L5/src/TestCustomHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/../L5/src/TestCustomHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L5/src/TestHashCollisions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../L5/src/TestHashCollisions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CoinChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoinChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fibonacci.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2W5MKsTXHE8EQEyRji23p5yGgux" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b2369f8d-3ed8-48cc-8c0c-c9acee52d054" name="Changes" comment="" />
+      <created>1696017930563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696017930563</updated>
+      <workItem from="1696017932734" duration="2591000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
