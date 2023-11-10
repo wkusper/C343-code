@@ -105,15 +105,31 @@ public class TreeTraversals {
      * See https://en.wikipedia.org/wiki/Tree_sort for more information.
      */
     static <E extends Comparable<E>> List<E> sort (List<E> elems) {
-        return null; // TODO
+        List<E> sortedList = new ArrayList<>(elems);
+        int n = sortedList.size();
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (sortedList.get(j).compareTo(sortedList.get(j + 1)) > 0) {
+                    // swap sortedList[j] and sortedList[j + 1]
+                    E temp = sortedList.get(j);
+                    sortedList.set(j, sortedList.get(j + 1));
+                    sortedList.set(j + 1, temp);
+                }
+            }
+        }
+
+        return sortedList;
     }
+
 
     /**
      * This method is just for convenience. It traverses the tree inorder and calls
      * the other balance method.
      */
     static <E extends Comparable<E>> BST<E> balance (BST<E> tree) {
-        return null; // TODO
+        List<E> sortedList = inOrderList(tree);
+        return balance(sortedList);
     }
 
     /**
@@ -121,7 +137,16 @@ public class TreeTraversals {
      * Recursively build the left and right subtrees from the elements left and right of the median.
      */
     static <E extends Comparable<E>> BST<E> balance (List<E> sorted) {
-        return null; // TODO
-    }
+        if (sorted.isEmpty()) {
+            return new EmptyBST<>();
+        }
 
+        int midIndex = sorted.size() / 2;
+        E median = sorted.get(midIndex);
+
+        List<E> leftElements = sorted.subList(0, midIndex);
+        List<E> rightElements = sorted.subList(midIndex + 1, sorted.size());
+
+        return new NodeBST<>(median, balance(leftElements), balance(rightElements));
+    }
 }

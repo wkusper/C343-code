@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class NodeBST<E extends Comparable<E>> extends BST<E> {
     private final E data;
     private final BST<E> left, right;
@@ -31,13 +33,21 @@ public class NodeBST<E extends Comparable<E>> extends BST<E> {
         else return new NodeBST<>(data, left, right.insert(elem));
     }
     public BST<E> insertAndBalance (E elem) {
-return null; // TODO
+    BST<E> result = insert(elem);
+    if (!result.isBalanced()) {
+        return TreeTraversals.balance(result);
+    }
+    return result;
     }
     public boolean find(E elem) {
-        return false; // TODO
+        if (elem.compareTo(data) == 0) return true;
+        else if (elem.compareTo(data) < 0) return left.find(elem);
+        else return right.find(elem);
     }
     String path(E key) throws EmptyTreeExc {
-        return null; // TODO
+        if (key.compareTo(data) == 0) return "";
+        else if (key.compareTo(data) < 0) return "0" + left.path(key);
+        else return "1" + right.path(key);
     }
     public BST<E> delete(E elem) throws EmptyTreeExc {
         if (elem.compareTo(data) < 0) return new NodeBST<>(data, left.delete(elem), right);
@@ -51,7 +61,11 @@ return null; // TODO
             }
         }
     BST<E> deleteAndBalance(E elem) throws EmptyTreeExc {
-        return null; // TODO
+        BST<E> result = delete(elem);
+        if (!result.isBalanced()) {
+            return TreeTraversals.balance(result);
+        }
+        return result;
     }
     public E findMin() {
         try {

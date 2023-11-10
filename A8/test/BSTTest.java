@@ -222,7 +222,7 @@ class BSTTest {
                 TreeTraversals.sort(List.of(1, 10, 2, 9, 3, 8, 4, 7, 5, 6)));
     }
     @Test
-    void deleteMin () throws EmptyTreeExc {
+    void deleteMinAndFindMin () throws EmptyTreeExc {
         assertThrows(EmptyTreeExc.class, () -> emptyTree.deleteMin());
         assertEquals(0, leafTree.deleteMin().size());
         assertEquals(1, listTree.findMin());
@@ -232,7 +232,7 @@ class BSTTest {
         assertEquals(14, balancedTree.deleteMin().size());
     }
     @Test
-    void deleteMax () throws EmptyTreeExc {
+    void deleteMaxAndFindMax () throws EmptyTreeExc {
         assertThrows(EmptyTreeExc.class, () -> emptyTree.deleteMax());
         assertEquals(0, leafTree.deleteMax().size());
         assertEquals(15, listTree.findMax());
