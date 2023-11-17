@@ -40,7 +40,10 @@ class Heap implements TreePrinter.PrintableNode {
      * The minimum is guaranteed to be at the root (of course if the tree is
      * not empty).
      */
-    int getMin() throws EmptyTreeE { return 0; } //TODO
+    int getMin() throws EmptyTreeE {
+        if (tree.isEmpty()) {throw new EmptyTreeE();} //empty tree
+        return tree.getData();
+    }
 
     /**
      * To delete the minimum, we first delete the root. This returns a balanced
@@ -48,7 +51,11 @@ class Heap implements TreePrinter.PrintableNode {
      * we move it down until it is in the right place in the tree.
      */
     void deleteMin() throws EmptyTreeE {
-        // TODO
+        if (tree.isEmpty()) {
+            throw new EmptyTreeE();
+        }
+        tree = tree.deleteRoot();
+        tree.moveDown();
     }
 
     // Printable interface

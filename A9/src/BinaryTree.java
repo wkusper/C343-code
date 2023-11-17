@@ -78,5 +78,7 @@ public abstract class BinaryTree<E extends Comparable<E>> implements TreePrinter
     static <E extends Comparable<E>> NodeBT<E> mkLeaf (E data) {
         return new NodeBT<>(data, new EmptyBT<>(), new EmptyBT<>());
     }
-
+    abstract void moveUp ();
+    abstract void moveDown ();
+    abstract void swapData(NodeBT<E> node) throws EmptyTreeE;
 }

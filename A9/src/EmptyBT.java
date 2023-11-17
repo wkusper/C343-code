@@ -17,9 +17,12 @@ public class EmptyBT<E extends Comparable<E>> extends BinaryTree<E> {
         return node;
     }
 
-    E getRightMost () throws EmptyTreeE { throw new EmptyTreeE(); }
-    BinaryTree<E> removeRightMost () throws EmptyTreeE { throw new EmptyTreeE(); }
-    BinaryTree<E> deleteRoot () throws EmptyTreeE { throw new EmptyTreeE(); }
+    E getRightMost () throws EmptyTreeE {
+        throw new EmptyTreeE(); }
+    BinaryTree<E> removeRightMost () throws EmptyTreeE {
+        throw new EmptyTreeE();}
+    BinaryTree<E> deleteRoot () throws EmptyTreeE {
+        throw new EmptyTreeE(); }
 
     // Printable interface
 
@@ -27,4 +30,9 @@ public class EmptyBT<E extends Comparable<E>> extends BinaryTree<E> {
     public TreePrinter.PrintableNode getRight() { return null; }
     public String getText() { return ""; }
 
+    public void swapData(NodeBT<E> node) throws EmptyTreeE{
+        throw new EmptyTreeE();
+    }
+    public void moveUp() {}
+    public void moveDown() {}
 }

@@ -80,8 +80,52 @@ class BinaryTreeTest {
 
         for (int i=1; i<15; i++) {
             heap.deleteMin();
+            TreePrinter.print(heap);
             assertTrue(heap.getTree().isBalanced());
             assertEquals(i+1, heap.getMin());
         }
     }
-}
+    @Test
+    void removeRightMost () throws EmptyTreeE {
+        BinaryTree<Integer> tree = new EmptyBT<>();
+        for (int i=1; i<16; i++) {
+            tree = tree.insertBalanced(BinaryTree.mkLeaf(i));
+        }
+
+        TreePrinter.print(tree);
+
+        for (int i=1; i<15; i++) {
+            tree = tree.removeRightMost();
+            TreePrinter.print(tree);
+            assertTrue(tree.isBalanced());
+            System.out.println(tree.getRightMost());
+        }
+    }
+    @Test
+    void deleteRoot2 () throws EmptyTreeE {
+        BinaryTree<Integer> tree = new EmptyBT<>();
+        for (int i=1; i<32; i++) {
+            tree = tree.insertBalanced(BinaryTree.mkLeaf(i));
+        }
+
+        TreePrinter.print(tree);
+
+        for (int i=1; i<32; i++) {
+            tree = tree.deleteRoot();
+            assertTrue(tree.isBalanced());
+        }
+    }
+    @Test
+    void deleteMin2 () throws EmptyTreeE {
+        Heap heap = new Heap();
+        for (int i=1; i<32; i++) { heap.insert(i); }
+
+        TreePrinter.print(heap);
+
+        for (int i=1; i<31; i++) {
+            heap.deleteMin();
+            TreePrinter.print(heap);
+            assertTrue(heap.getTree().isBalanced());
+            assertEquals(i+1, heap.getMin());
+        }
+    }

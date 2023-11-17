@@ -29,7 +29,14 @@ public class NodeBT<E extends Comparable<E>> extends BinaryTree<E> {
     boolean isBalanced () { return Math.abs(left.height() - right.height()) <= 1; }
 
     BinaryTree<E> insertBalanced(NodeBT<E> node) {
-        return null; //TODO
+        if (left.insertBalanced(node).height() > right.insertBalanced(node).height()) {
+            node.parent = Optional.of(this); //update parent
+            return new NodeBT<>(data, right.insertBalanced(node), left);
+
+        } else {
+            node.parent = Optional.of(this); //update parent
+            return new NodeBT<>(data, right, left.insertBalanced(node));
+        }
     }
 
     E getRightMost () {
@@ -42,14 +49,31 @@ public class NodeBT<E extends Comparable<E>> extends BinaryTree<E> {
 
     BinaryTree<E> removeRightMost () {
         try {
-            return getRightBT().removeRightMost();
+            return new NodeBT<>(this.getData(), this.getRightBT().removeRightMost(), this.getLeftBT());
         } catch (EmptyTreeE e) {
-            return left;
+            return this.getLeftBT();
         }
     }
 
+
     BinaryTree<E> deleteRoot () {
-        return null; //TODO
+        try{
+            if (this.getLeftBT().isEmpty() && this.getRightBT().isEmpty()){
+                return new EmptyBT<>();
+            }
+            if (this.getLeftBT().isEmpty()) {
+                return this.getRightBT();
+            }
+            if (this.getRightBT().isEmpty()) {
+                return this.getLeftBT();
+            }
+            E rightMost = getRightMost();
+            BinaryTree<E> tree = removeRightMost();
+            return new NodeBT<>(rightMost, tree.getLeftBT(), tree.getRightBT());
+        }
+        catch (EmptyTreeE e) {
+            return null;
+        }
     }
 
     /**
@@ -75,9 +99,54 @@ public class NodeBT<E extends Comparable<E>> extends BinaryTree<E> {
      *  two children.
      */
     void moveDown () {
-        //TODO
+        //node is a leaf. do nothing
+        if (left.isEmpty() && right.isEmpty()) {
+            return;
+        } else {
+            try {
+                //only left child
+                if (!left.isEmpty() && right.isEmpty()) {
+                    if (left.getData().compareTo(this.data) < 0) { //child smaller than node. swap, moveDown()
+                        left.swapData(this);
+                        left.moveDown();
+                    }
+
+                }
+
+                //only right child
+                if (left.isEmpty() && !right.isEmpty()) {
+                    if (right.getData().compareTo(this.data) < 0) { //child smaller than node. swap, moveDown()
+                        right.swapData(this);
+                        right.moveDown();
+                    }
+                }
+                //both children
+                if (!left.isEmpty() && !right.isEmpty()) {
+                    if (right.getData().compareTo(left.getData()) < 0) { //right is smaller
+                        if (right.getData().compareTo(this.data) < 0) { //child smaller than node. swap, moveDown()
+                            right.swapData(this);
+                            right.moveDown();
+                        }
+                    } else { //left is smaller
+                        if (left.getData().compareTo(this.data) < 0) { //child smaller than node. swap, moveDown()
+                            left.swapData(this);
+                            left.moveDown();
+                        }
+                    }
+                }
+
+
+            } catch (EmptyTreeE e) {
+                //do something
+            }
+        }
     }
 
+    public void swapData(NodeBT<E> eNodeBT) {
+        E temp = this.data;
+        this.data = eNodeBT.data;
+        eNodeBT.data = temp;
+    }
     // Printable interface
 
     public TreePrinter.PrintableNode getLeft() { return left.isEmpty() ? null : left; }
